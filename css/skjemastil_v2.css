@@ -1,0 +1,38 @@
+form{
+    background-color: beige;
+    padding: 10px;
+    margin: 5px;
+}
+
+label, select{
+    display:block;
+}
+
+label > input[type="text"], label > input[type="number"], label > textarea,
+label > input[type="date"], label > input[type="color"],
+label > input[type="password"], label > input[type="range"]{
+    display: flex;
+}
+/*Styler flere bokser samtidig*/
+input[type="text"], input[type="number"], textarea, label > select, 
+input[type="date"], input[type="color"],
+input[type="password"], input[type="range"]{
+    margin-bottom: 10px;
+    width: 220px;
+}
+
+.radio, .checkbox{
+    margin-bottom: 10px; 
+}
+
+input[type="submit"], button{
+    display: block;
+    width: 220px;
+    /*background-color:blueviolet;*/
+    margin-bottom: 5px;;
+}
+
+/*
+input[type="submit"]:hover, button:hover{
+    background-color: bisque;
+}*/
