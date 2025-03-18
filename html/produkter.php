@@ -100,7 +100,6 @@ $cartCount = isset($_SESSION['cart']) ? count($_SESSION['cart']) : 0;
             <h3><?php echo ($row['navn']); ?></h3>
             <p><?php echo ($row['beskrivelse']); ?></p>
             <div class="price">kr <?php echo ($row['pris']); ?></div>
-            <!-- Sender nettside som parameter til goToCart-funksjonen -->
             <button class="buy-button" onclick="goToCart('<?php echo $row['nettside']; ?>')">Kjøp</button>
         </div>
     </div>
