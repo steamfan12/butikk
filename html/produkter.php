@@ -95,20 +95,27 @@ $cartCount = isset($_SESSION['cart']) ? count($_SESSION['cart']) : 0;
         <div class="product">
         <?php if ($result && $result->num_rows > 0): ?>
             <?php while ($row = $result->fetch_assoc()): ?>
-                <div class="product-card">
-                    <div class="product-info">
-                        <h3><?php echo ($row['navn']); ?></h3>
-                        <p><?php echo ($row['beskrivelse']); ?></p>
-                        <div class="price">kr <?php echo ($row['pris']); ?></div>
-                        <button class="buy-button" onclick="addToCart(<?php echo $row['vare_id']; ?>)">Kjøp</button>
-                    </div>
-                </div>
-            <?php endwhile; ?>
+    <div class="product-card">
+        <div class="product-info">
+            <h3><?php echo ($row['navn']); ?></h3>
+            <p><?php echo ($row['beskrivelse']); ?></p>
+            <div class="price">kr <?php echo ($row['pris']); ?></div>
+            <!-- Sender nettside som parameter til goToCart-funksjonen -->
+            <button class="buy-button" onclick="goToCart('<?php echo $row['nettside']; ?>')">Kjøp</button>
+        </div>
+    </div>
+        <?php endwhile; ?>
         <?php else: ?>
             <p>Ingen varer funnet.</p>
         <?php endif; ?>
         </div>
     </div>
-
+    <script>
+            function goToCart(nettsideUrl) {
+            window.location.href = nettsideUrl;
+            }
+</script>
 </body>
+
+            
 </html>
