@@ -17,7 +17,7 @@
                 <h1>GainsGarantisten.no</h1>
                 KJØP STEROIDER OG PEPTIDER PÅ NETT
             <?php include 'html/kategorier.html'; ?>
-            <?php include 'html/produkter.html'; ?>
+            <?php include 'html/produkter.php'; ?>
             </section>
         </main>
         <?php include 'php/footer.php' ?>
