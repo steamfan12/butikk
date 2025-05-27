@@ -7,91 +7,19 @@
     body {
       background-color: #e0e0e0;
     }
-
-    #bildekarusell {
-    width: 400px;
-    height: 350px;
-    position: relative;
-    margin: 50px auto;
-    overflow: hidden;
-}
-
-
-    .bilde {
-      width: 400px;
-      height: 350px;
-      position: absolute;
-      left: 0;
-      top: 0;
-      background-size: cover;
-      background-position: center;
-    }
-
-    @keyframes innFraHoyre {
-      from { left: 400px; }
-      to { left: 0px; }
-    }
-
-    @keyframes utTilVenstre {
-      from { left: 0px; }
-      to { left: -400px; }
-    }
   </style>
 </head>
 <body>
 
   <div class="category-list">
-    <h3>Kategorier</h3>
+    <h3>Attraksjoner</h3>
     <ul>
-        <li><a href="#">Injiserbare steroider</a></li>
-        <li><a href="#">Peptider</a></li>
-        <li><a href="#">Orale steroider</a></li>
-        <li><a href="#">Sprøyter</a></li>
-        <li><a href="#">Desinfiseringsutstyr</a></li>
+        <li><a href="#">Berg og dalbanenene</a></li>
+        <li><a href="#">Vannskliene</a></li>
+        <li><a href="#">Spøkelseshuset</a></li>
+        <li><a href="#">Karusellene</a></li>
+        <li><a href="#">Dyreopplevelsene</a></li>
     </ul>
 </div>
-
-  <div id="bildekarusell">
-    <div class="bilde"></div>
-    <div class="bilde"></div>
-    <div class="bilde"></div>
-  </div>
-
-  <script>
-    let indeksSynligBilde = 0;
-    let indeksNesteBilde;
-    const tid = 3000;
-
-    const bildefiler = ["Bilder/bilde1.jpg", "Bilder/bilde2.jpg", "Bilder/bilde3.jpg"];
-    const bilder = document.querySelectorAll(".bilde");
-
-    for (let i = 0; i < bilder.length; i++) {
-      bilder[i].style.backgroundImage = "url(" + bildefiler[i] + ")";
-      if (i !== 0) {
-        bilder[i].style.display = "none";
-      }
-    }
-
-    setTimeout(flytt, tid);
-
-    function flytt() {
-      if (indeksSynligBilde === bilder.length - 1) {
-        indeksNesteBilde = 0;
-      } else {
-        indeksNesteBilde = indeksSynligBilde + 1;
-      }
-
-      bilder[indeksNesteBilde].style.left = "400px";
-      bilder[indeksNesteBilde].style.display = "block";
-      bilder[indeksNesteBilde].style.animation = "innFraHoyre 2s forwards";
-
-      bilder[indeksSynligBilde].style.animation = "utTilVenstre 2s forwards";
-
-      indeksSynligBilde = indeksNesteBilde;
-
-      setTimeout(flytt, tid);
-    }
-  </script>
-
 </body>
 </html>

@@ -14,8 +14,8 @@
         <?php include 'php/mainNav.php' ?>
         <main>
             <section>
-                <h1>GainsGarantisten.no</h1>
-                KJØP STEROIDER OG PEPTIDER PÅ NETT
+                <h1>Kvaløya fornøyelsespark</h1>
+                Den eneste fornøyelsesparken i arktis
             <?php include 'html/kategorier.html'; ?>
             <?php include 'html/produkter.php'; ?>
             </section>
