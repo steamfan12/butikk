@@ -3,13 +3,15 @@
 <head>  <!--Metainformasjon om siden-->
     <title>Home</title>
     <?php include 'php/head.php' ?>
-</head>
-
-<style>
+    <style>
         <?php include 'css/mainLayout.css'; ?>
     </style>
+</head>
+
+
 
 <body>
+    
     <div id="container"> 
         <?php include 'php/mainNav.php' ?>
         <main>
@@ -23,4 +25,5 @@
         <?php include 'php/footer.php' ?>
     </div>
 </body>
+
 </html> 

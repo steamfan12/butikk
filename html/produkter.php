@@ -121,6 +121,7 @@ $cartCount = isset($_SESSION['cart']) ? count($_SESSION['cart']) : 0;
             <p><?php echo ($row['beskrivelse']); ?></p>
             <div class="price">Aldersgrense: <?php echo ($row['aldersgrense']); ?> år</div>
             <button class="buy-button" onclick="goToCart('<?php echo $row['nettside']; ?>')">Les mer</button>
+            <button class="buy-button" onclick="('<?php echo $row['nettside']; ?>')">Liker</button>
         </div>
     </div>
         <?php endwhile; ?>
